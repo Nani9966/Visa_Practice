@@ -6,11 +6,14 @@ from pathlib import Path
 import logging
 
 
+                         
+                                                        
+ 
 
 while True:
-    Project_name = input("Enter the Project_name")
+    project_name = input("Enter the project_name")
 
-    if Project_name !="":
+    if project_name !='':
         break
 
 logging.basicConfig(  
@@ -20,39 +23,48 @@ logging.basicConfig(
 
 list_of_files=[
 
-    f"{Project_name}/__init__.py",
-    f"{Project_name}/components/__init__.py",
-    f"{Project_name}/config/__init__.py",
-    f"{Project_name}/constant/__init__.py",
-    f"{Project_name}/entity/__init__.py",
-    f"{Project_name}/logger/__init__.py",
-    f"{Project_name}/pipeline/__init__.py",
-    f"{Project_name}/utiles/__init__.py",
-    f"{Project_name}/exception/__init__.py",
+    f"{project_name}/__init__.py",
+    f"{project_name}/components/__init__.py",
+    f"{project_name}/config/__init__.py",
+    f"{project_name}/constant/__init__.py",
+    f"{project_name}/entity/__init__.py",
+                                            
+    f"{project_name}/logger/__init__.py",
+    f"{project_name}/pipeline/__init__.py",
+    f"{project_name}/utils/__init__.py",
+    f"{project_name}/exception/__init__.py",
     f"config/config.yaml",
-    f"setup.py",
-    f"main.py",
-    f"requirement.txt",
-    f"demo.py"
+                  
+                       
+    "setup.py",                 
+    "main.py",
+    "requirement.txt",
+    "demo.py"
+    "schema.yaml"
 
 ]
 
 
 
-for file_path in list_of_files:
-    file_path=Path(file_path)
-    file_dir ,file_name = os.path.split(file_path):
-    if file_dir!="":
-        os.makedirs(file_dir,exist_ok=True):
-        logging.info(f" created new directory at:{file_dir} for file{file_name} ")
+for filepath in list_of_files:
+    filepath=Path(filepath)
+    filedir ,filename = os.path.split(filepath)
+    if filedir!="":
+        os.makedirs(filedir,exist_ok=True)
+        logging.info(f" created new directory at:{filedir} for file{filename} ")
 
-    if(not os.path.exists(file_path) or os.path.getsize(file_name)==0):
+    if(not os.path.exists(filepath) or os.path.getsize(filepath)==0):
 
-        with open(file_path,"w") as f:
+        with open(filepath,"w") as f:
             pass
-            logging.info(f" created new file at:{file_dir} for file: {file_name} ")
+            logging.info(f" created new file at:{filename} for file: {filepath} ")
     else:
-        logging.info(f" The file is aleardy present : {file_name} ")
+        logging.info(f" The file is aleardy present : {filepath}")
+
+
+
+
+
 
 
 
