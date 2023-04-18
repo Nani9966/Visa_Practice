@@ -1,0 +1,11 @@
+[2023-04-18 22:51:57,221] werkzeug - WARNING -  * Debugger is active!
+[2023-04-18 22:51:57,233] werkzeug - INFO -  * Debugger PIN: 539-661-026
+[2023-04-18 22:52:34,200] root - INFO -  
+        Error occured in our script :
+        [C:\Machine Learning Project\Visa_Practice\demo2.py] at
+        try block line number at :[11] and execption_block_line_number at : [13]
+        error message: [We are testing our Custom Exceptio file]
+        
+[2023-04-18 22:52:34,201] root - INFO - we are testing logging module
+[2023-04-18 22:52:34,202] werkzeug - INFO - 127.0.0.1 - - [18/Apr/2023 22:52:34] "GET / HTTP/1.1" 200 -
+[2023-04-18 22:52:34,266] werkzeug - INFO - 127.0.0.1 - - [18/Apr/2023 22:52:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
