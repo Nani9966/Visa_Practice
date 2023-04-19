@@ -1,0 +1,16 @@
+training_pipeline_config:
+  pipeline_name: visa
+  artifact: artifact
+
+
+
+
+
+data_ingestion_config:
+  dataset_download_url: url (s3,Datbase,Github,MANGODB)
+  raw_data_dir:  raw_data
+  ingested_dir:  ingested_data
+  ingested_train_dir:  train
+  ingested_test_data : test
+
+
