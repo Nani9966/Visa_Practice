@@ -1,8 +1,26 @@
-a = 0
-b= 1
-sum =0
-for i in range (0 , 10):
-    a =b
-    b=sum
-    sum =a+b
-    print(sum,end = " ")
+import os,sys
+import pandas as pd
+import numpy as np
+from visa.constant import *
+from visa.logger import logging
+
+from visa.exception import CustomException
+                                            
+              
+
+from visa.pipeline.pipeline import Pipeline
+
+
+def main():
+    try :
+        
+        pipeline= Pipeline()
+        pipeline.run_pipeline()
+
+    except Exception as e:
+        logging.error(f"{e}")
+
+
+if __name__=="__main__":
+    main()
+    
