@@ -1,6 +1,6 @@
-import os
+import sys
 from visa.constant import *
-from visa.logger import logging 
+from visa.logger import logging
 from visa.exception import CustomException
 from visa.entity.config_entity import *
 from visa.utils.utils import read_yaml_file
@@ -13,12 +13,13 @@ class Configuartion :
                   current_time_stamp:str =CURRENT_TIME_STAMP)-> None:
                   
         try:
-            self.config.info = read_yaml_file(file_path=config_file_path)
-            self.training_pipeline_config = self.get_training_pipeline_config ()
+            self.config_info = read_yaml_file(file_path=config_file_path)
+
+            self.training_pipeline_config = self.get_training_pipeline_config()
             self.time_stamp=current_time_stamp
 
         except Exception as e:
-            raise CustomException(e,sys)from e
+            raise CustomException(e,sys) from e
 
 
     def get_data_ingestion_config(self)->DataIngestionConfig:
@@ -31,7 +32,7 @@ class Configuartion :
              
                                                                              
 
-            data_ingestion_info = self.config_file_path[ DATA_INGESTION_CONFIG_KEY ]
+            data_ingestion_info = self.config_info[ DATA_INGESTION_CONFIG_KEY ]
             dataset_download_url = data_ingestion_info[DATA_INGESTION_DOWNLOAD_URL_KEY]
 
             raw_data_dir=os.path.join(data_ingestion_artifact_dir,
@@ -53,7 +54,7 @@ class Configuartion :
             data_ingestion_config= DataIngestionConfig( dataset_download_url= dataset_download_url,
                                                        raw_data_dir=raw_data_dir,
                                                        ingested_train_dir= ingested_train_dir,
-                                                       ingested_test_data=ingested_test_dir)
+                                                       ingested_test_dir=ingested_test_dir)
             return data_ingestion_config
 
                                                       
