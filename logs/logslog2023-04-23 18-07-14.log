@@ -1,0 +1,24 @@
+[2023-04-23 18:07:30,124] root - INFO - Training pipeline completed: TrainingPipelineConfig(artifact_dir='C:\\Machine Learning Project\\Visa_Practice\\visa\\artifact')
+[2023-04-23 18:07:30,124] root - INFO - Data Ingestion config: DataIngestionConfig(dataset_download_url='https://raw.githubusercontent.com/Shivan118/Main-Branching/main/Visadataset.csv', raw_data_dir='C:\\Machine Learning Project\\Visa_Practice\\visa\\artifact\\data_ingestion\\2023-04-23-18-07-14\\raw_data', ingested_train_dir='C:\\Machine Learning Project\\Visa_Practice\\visa\\artifact\\data_ingestion\\2023-04-23-18-07-14\\ingested_data\\train', ingested_test_dir='C:\\Machine Learning Project\\Visa_Practice\\visa\\artifact\\data_ingestion\\2023-04-23-18-07-14\\ingested_data\\test')
+[2023-04-23 18:07:30,126] root - INFO - Downloading file from: [https://raw.githubusercontent.com/Shivan118/Main-Branching/main/Visadataset.csv] into :[C:\Machine Learning Project\Visa_Practice\visa\artifact\data_ingestion\2023-04-23-18-07-14\raw_data]
+[2023-04-23 18:08:12,547] root - ERROR - 
+        Error occured in script: 
+        [ C:\Machine Learning Project\Visa_Practice\visa\pipeline\pipeline.py ] at 
+        try block line number: [36] and exception block line number: [39] 
+        error message: [
+        Error occured in script: 
+        [ C:\Machine Learning Project\Visa_Practice\visa\pipeline\pipeline.py ] at 
+        try block line number: [27] and exception block line number: [29] 
+        error message: [
+        Error occured in script: 
+        [ C:\Machine Learning Project\Visa_Practice\visa\components\data_ingestion.py ] at 
+        try block line number: [97] and exception block line number: [100] 
+        error message: [
+        Error occured in script: 
+        [ C:\Machine Learning Project\Visa_Practice\visa\components\data_ingestion.py ] at 
+        try block line number: [35] and exception block line number: [42] 
+        error message: [<urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>]
+        ]
+        ]
+        ]
+        

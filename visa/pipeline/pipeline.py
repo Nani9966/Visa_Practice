@@ -11,10 +11,7 @@ from collections import namedtuple
 from visa.config.configuration import Configuartion
 from visa.components.data_ingestion import DataIngestion
 
-
-
 class Pipeline():
-
     def __init__(self, config: Configuartion = Configuartion())->None:
         try:
             self.config = config
@@ -34,10 +31,5 @@ class Pipeline():
         try:
             # Data Ingestion
             data_ingestion_artifact = self.start_data_ingestion()
-                                                                                          
         except Exception as e:
             raise CustomException(e,sys) from e  
-
-    
-
-

@@ -1,8 +1,6 @@
 from setuptools import setup, find_packages
 from typing import List
 
-
-
 project_name= "ML_Project"
 VERSION = "0.0.1"
 AUTHOR = "chinna reddy"
